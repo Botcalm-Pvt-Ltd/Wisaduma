@@ -1,0 +1,73 @@
+
+
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar styles */
+    nav {
+      background-color: #ffffff;
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo styles */
+    .logo {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Search bar styles */
+    .search-bar {
+      width: 300px;
+      padding: 8px;
+      border: black solid 1px;
+      border-radius: 4px;
+      margin: 0 20px;
+    }
+
+    /* Profile dropdown styles */
+    .profile-dropdown {
+      position: relative;
+      text-align: center;
+    }
+
+    .profile-dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position the dropdown below the profile button */
+      right: 0; 
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 2;
+      text-align: left;
+    }
+
+    .profile-dropdown:hover .profile-dropdown-content {
+      display: block;
+       text-decoration: none;
+    }
+
+    .profile-dropdown-item {
+      padding: 12px;
+      text-decoration: none;
+      display: block;
+      color: #333;
+    }
+
+
+    .modal-content {
+        border-radius: 20px;
+        border: 1px solid
+    }
+    .modal-title{
+      font-weight: 700;
+    }

@@ -1,0 +1,125 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.form-control {
+  width: 500px; /* Adjust the width to your desired value */
+  align-items: center;
+  border: 1px solid black;
+}
+
+.container-fluid {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.fh5co_heading {
+  font-size: 20px;
+  color: #424040;
+}
+
+.fh5co_heading_border_bottom {
+  border-bottom: 1px solid #777;
+}
+.sec-headline {
+  display: flex;
+}
+.modal-body-design {
+  display: flex;
+}
+.modal-body-design-column {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .modal-body-design {
+    flex-direction: column; /* Change flex direction to column for smaller screens */
+  }
+
+  .modal-body-design-column {
+    flex: none; /* Remove the flex property for each column to make them stack vertically */
+    width: 100%; /* Set the width to 100% to occupy the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+  }
+}
+
+img.profile-photo-md {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+img.profile-photo-sm {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.comment-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  gap: 10px;
+}
+
+.cont-category {
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: #0069ac33;
+  color: #0069ac;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 40%;
+}
+
+.cont-tittle {
+  font-weight: 700;
+}
+.cont-person {
+  font-size: 0.75rem;
+  color: #0069ac;
+  font-weight: 700;
+}
+
+.cont-location {
+  font-size: 0.75rem;
+  color: #000000;
+  font-weight: 700;
+}
+/* Default style for both images */
+.responsive-image {
+  display: none;
+}
+
+/* Show the first image on screens wider than 768 pixels (desktop) */
+@media (min-width: 769px) {
+  .desktop-image {
+    display: block;
+  }
+}
+
+/* Show the second image on screens up to 768 pixels (mobile) */
+@media (max-width: 768px) {
+  .mobile-image {
+    display: block;
+  }
+}

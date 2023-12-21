@@ -1,0 +1,130 @@
+.container-login {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      height: 100vh;
+      margin: 0;
+      background-color: #f8f9fa;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  .column {
+      flex: 1;
+
+    }
+.logo-login{
+  text-align: end;
+  } 
+  .top-logo-login{
+     text-align:center;
+  }
+
+.login-tittle{
+     font-size: 3.5rem;
+    font-weight: 500;
+}
+.login-input-tittle{
+      font-size: 1.5rem;
+    font-weight: 500;
+}
+.reg-input-tittle{
+    display: none;
+}
+.register-input-tittle{
+  font-size: 2rem;
+    font-weight: 500
+}
+.redirect-to-signup{
+    text-align: center;
+    font-weight: 500;
+}
+.redirect-to-link{
+   text-decoration: none;
+}
+.redirect-to-link-dash{
+    color: #ffffff;
+       text-decoration: none;
+}
+.moba-logo{
+    display: none;
+}
+.tab-logo{
+    display: none;
+}
+
+   @media (max-width: 767px) {
+      /* Hide the div on screens smaller than 768 pixels */
+      .logo-login {
+       display: none;
+      }
+      .tab-logo{
+    display: none;
+}
+      .moba-logo{
+      margin-top: 20px;
+      display: block;
+;
+}
+
+    }
+
+    @media (max-width: 767px) {
+  .container-login {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .login-tittle{
+     font-size: 1.5rem;
+}
+.login-input-tittle{
+  font-size: 1rem;
+}
+  .column {
+    order: 2; /* Change the order for mobile layout */
+  }
+
+  .logo-login, .top-logo-login {
+    text-align: center;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Add your styles for iPad in portrait mode here */
+    .logo-login {
+       display: none;
+      }
+    .container-login {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 140px;
+
+  }
+    .tab-logo{
+      display: block;
+      margin-top: 10px;
+}
+.reg-input-tittle{
+    display: block;
+      font-size: 1.5rem;
+    font-weight: 500;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
