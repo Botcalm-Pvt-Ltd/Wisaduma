@@ -9,17 +9,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" href="../assets/Images/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../assets/dashboard.css">
-      <link href="../assets/owl.carousel.css" rel="stylesheet" type="text/css"/>
-    <link href="../assets/owl.theme.default.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="./assets/Images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/dashboard.css">
+      <link href="./assets/owl.carousel.css" rel="stylesheet" type="text/css"/>
+    <link href="./assets/owl.theme.default.css" rel="stylesheet" type="text/css"/>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
- <link rel="stylesheet" href="../assets/header.css">
+ <link rel="stylesheet" href="./assets/header.css">
     
-
 
 
   </head>
@@ -27,7 +26,7 @@
 <body>
 
   <nav>
-    <img src="../assets/Images/Top-logo1.png" alt="Your Logo" class="logo">
+    <img src="./assets/Images/Top-logo1.png" alt="Your Logo" class="logo">
     <input type="text" placeholder="Search" class="search-bar">
     
     <div class="profile-dropdown">
@@ -49,7 +48,7 @@
             <div class="owl-carousel owl-theme" id="slider2">
                                <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-               <img src=" ../assets/Images/2.png" alt="" data-toggle="modal" data-target="#myModal"/>
+               <img src=" ./assets/Images/2.png" alt="" data-toggle="modal" data-target="#myModal"/>
                     <div>
                       
                       <div class="cont-category w-10">Road Crack</div>
@@ -62,7 +61,7 @@
             </div>
             <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/1.png " alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/1.png " alt=""/></div>
                     <div>
                       
                         <div class="cont-category w-45">Damaged bridge</div>
@@ -75,7 +74,7 @@
             </div>
             <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/3.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/3.png" alt=""/></div>
                     <div>
                       
                       <div class="cont-category w-45">Poor Drainage</div>
@@ -88,7 +87,7 @@
             </div>
             <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/1.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/1.png" alt=""/></div>
                     <div>
                         <div class="cont-category ">Road Crack</div>
                     <div class="cont-tittle" > Road Damage is a Nuisance for Drivers.</div>
@@ -100,7 +99,7 @@
             </div>
                  <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/3.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/3.png" alt=""/></div>
                     <div>
                       
                        <div class="cont-category w-45">Poor Drainage</div>
@@ -113,7 +112,7 @@
             </div>
                     <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/1.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/1.png" alt=""/></div>
                     <div>
                        <div class="cont-category w-40">Road Crack</div>
                         <div class="cont-tittle" > Road Damage is a Nuisance for Drivers.</div>
@@ -133,7 +132,7 @@
             <div class="owl-carousel owl-theme" id="slider3">
                           <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                                <div class="fh5co_news_img"><img src="../assets/Images/l1.png" alt=""/></div>
+                                <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt=""/></div>
                     <div>
                       
                          <div class="cont-category w-45">Tree fallen</div>
@@ -146,7 +145,7 @@
             </div>
                 <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/l1.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt=""/></div>
                     <div>
                       
                        <div class="cont-category w-45">Tree fallen</div>
@@ -159,7 +158,7 @@
             </div>
                       <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/l1.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt=""/></div>
                     <div>
                       
                      <div class="cont-category w-45">Tree fallen</div>
@@ -172,7 +171,7 @@
             </div>
                        <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/l1.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt=""/></div>
                     <div>
                       
                           <div class="cont-category w-45">Tree fallen</div>
@@ -194,7 +193,7 @@
             <div class="owl-carousel owl-theme" id="slider4">
                           <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/t1.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt=""/></div>
                     <div>
                       
                                <div class="cont-category w-45">Unsafe Electrical</div>
@@ -207,7 +206,7 @@
             </div>
                 <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/t1.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt=""/></div>
                     <div>
                       
                            <div class="cont-category w-45">Unsafe Electrical</div>
@@ -220,7 +219,7 @@
             </div>
                       <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                   <div class="fh5co_news_img"><img src="../assets/Images/t1.png" alt=""/></div>
+                   <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt=""/></div>
                     <div>
                       
                               <div class="cont-category w-45">Unsafe Electrical</div>
@@ -233,7 +232,7 @@
             </div>
                        <div class="item px-2">
                 <div class="fh5co_hover_news_img">
-                    <div class="fh5co_news_img"><img src="../assets/Images/t1.png" alt=""/></div>
+                    <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt=""/></div>
                     <div>
                       
                                <div class="cont-category w-45">Unsafe Electrical</div>
@@ -271,8 +270,8 @@
 
         <div class="modal-body-design ">
          <div class="modal-body-design-column">
-     <img class="responsive-image desktop-image" src="../assets/Images/large-modal.png" alt=""/>
-    <img class="responsive-image mobile-image" src="../assets/Images/1.png" alt=""/>
+     <img class="responsive-image desktop-image" src="./assets/Images/large-modal.png" alt=""/>
+    <img class="responsive-image mobile-image" src="./assets/Images/1.png" alt=""/>
         </div>
        <div class="modal-body-design-column">
        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta facilis enim veniam voluptatem quod debitis corporis! Enim maxime quos nihil et perferendis  totam harum placeat  magnam repellendus veniam totam harum placeat magnam repellendus veniam totam harum placeat. Voluptatibus autem voluptatum eligendi, magnam repellendus veniam totam harum placeat
@@ -369,7 +368,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="../assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/owl.carousel.min.js"></script>
 <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-BnmB6ys25D5Wy8qVpBabAqYpP5pmSo2rFJOIfx3YNYU6cHsBVtEOxIbO5gSNTTN6K0sdtAuhU7jsz4zUq8XGP7Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -385,9 +384,9 @@
         }
     </script>
 <!-- Waypoints -->
-<script src="../assets/js/jquery.waypoints.min.js"></script>
+<script src="./assets/js/jquery.waypoints.min.js"></script>
 <!-- Main -->
-<script src="../assets/js/main.js"></script>
+<script src="./assets/js/main.js"></script>
 
 
 
