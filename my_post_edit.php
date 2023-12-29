@@ -1,6 +1,6 @@
 <?php
 
-include('./layouts/db.php');
+include('./include/db.php');
 
 // Make sure $m_id is a valid integer to prevent SQL injection
 $m_id = intval($_GET["modal_id"]);
@@ -18,25 +18,21 @@ $result = $stmt->get_result();
 // Fetch the posts
 $posts = $result->fetch_assoc();
 
-$user = $posts['post_by'];
-$user = $conn->query("SELECT `name` FROM `users` WHERE `id` = $user");
-$user_catch = $user->fetch_assoc();
-$user_c = $user_catch["name"];
 
 ?>
 
 <div class="modal-header">
     <h4 class="modal-title text-center">EDIT POST</h4>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
 
 <div class="modal-body">
-    <form id="formPosts" method="post" action="posts_edit_submit.php">
+    <form id="formPosts" method="post" action="my_post_edit_submit.php">
         <div class="modal-body">
             <div class="mb-2 d-flex align-items-center justify-content-between ">
-                <img src=".<?php echo $posts['img_path'];  ?>" alt="" width="100" height="50">
+                <img src="<?php echo $posts['img_path'];  ?>" alt="" width="100" height="50">
                 <input type="file" class="form-control ml-5" name="img">
             </div>
             <div class="mb-2">
@@ -56,23 +52,12 @@ $user_c = $user_catch["name"];
                     <option value="Other" <?php echo ($posts['category'] == "Other") ? "selected" : ""; ?>>Other</option>
                 </select>
             </div>
-            <div class="mb-2">
-                <label for="status" class="form-label">Status</label>
-                <select name="status" class="form-control">
-                    <option value="1" <?php echo ($posts['status'] == 1) ? "selected" : ""; ?>>Active</option>
-                    <option value="0" <?php echo ($posts['status'] == 0) ? "selected" : ""; ?>>Inactive</option>
-                </select>
-            </div>
-            <div class="mb-2">
-                <label for="short_desc" class="form-label">Post By</label>
-                <input type="text" class="form-control" name="post_by" disabled value="<?php echo $user_c; ?>">
-            </div>
+            
         </div>
         <input type="hidden" name="post_id" id="post_id" value="<?php echo $posts['id'] ?>">
         <div id="error" class="alert alert-danger" style="display:none;">Error message goes here.</div>
-        <div class="modal-footer justify-content-end">
-            <button type="submit" class="btn btn-xs btn-primary px-2 py-1">Save</button>
-            <button type="button" class="btn btn-xs btn-danger px-2 py-1" data-dismiss="modal">Close</button>
+        <div class="modal-footer ">
+            <button type="submit" class="btn  btn-primary px-2 py-1">Save</button>
         </div>
     </form>
 </div>
@@ -128,9 +113,9 @@ $user_c = $user_catch["name"];
                         if (data.status == 1) {
                             toastr.success('Post has been updated successfully!');
                             $('#modalBTNLoad').modal('hide');
-                            $("#postsList").load("post_list.php");
+                            $("#list01").load("my_post_list.php");
                         } else {
-                            $("#error").show().html("Error message: " + data.message);
+                            toastr.error('Something went wrong!');
                         }
                     },
                     error: function(xhr, textStatus, errorThrown) {

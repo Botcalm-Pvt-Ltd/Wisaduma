@@ -22,7 +22,7 @@ if (isset($_SESSION['user'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
+  <title>MyPosts</title>
 
   <link rel="icon" href="./assets/Images/logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="./assets/dashboard.css">
@@ -51,17 +51,6 @@ include('./include/nav.php');
       <div class=" container animate-box" id="list01">
       </div>
 
-      <!-- slider two load here -->
-      <div class=" container animate-box" id="list02">
-      </div>
-
-      <!-- slider three load here -->
-      <div class=" container animate-box" id="list03">
-      </div>
-
-      <!-- slider four load here -->
-      <div class=" container animate-box" id="list04">
-      </div>
     </div>
 
     <div class="modal fade" id="modalBTNLoad">
@@ -75,9 +64,12 @@ include('./include/nav.php');
 
   </div>
 
+  <div style="position: absolute; left: 0; bottom: 0; width: 100%;">
   <?php  
     include('./include/footer.php');
   ?>
+  </div>
+  
  
 
 
@@ -100,22 +92,16 @@ include('./include/nav.php');
   <script>
     // Load Project List after the document is fully loaded
 
-    $("#list01").load("slider1.php", {
-      limit: 25
+    $("#list01").load("my_post_list.php", {
+      limit: 25,
     });
 
-    $("#list02").load("slider2.php", {
-      limit: 25
-    });
-
-    $("#list03").load("slider3.php", {
-      limit: 25
-    });
-
-    $("#list04").load("slider4.php", {
-      limit: 25
-    });
   </script>
+
+  
+
+
+
 
 
   <!-- add post -->
@@ -162,10 +148,6 @@ include('./include/nav.php');
         });
     });
   </script>
-
-
-
-
 
 </body>
 

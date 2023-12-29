@@ -1,18 +1,17 @@
 <?php
 
-include('./layouts/db.php');
+include('./include/db.php');
 
 // post values
-$id = $_POST["post_id"];
-$title = $_POST["title"];
-$desc = $_POST["description"];
-$category = $_POST["category"];
-$status = $_POST["status"];
+$id = $_POST["user_id"];
+$name = $_POST["name"];
+$email = $_POST["email"];
+
 
 // Check if an image file is uploaded
 if (isset($_FILES["img"]) && !empty($_FILES["img"]["name"])) {
     // File upload handling
-    $targetDir = "../assets/images/"; // Change this to your desired directory
+    $targetDir = "./assets/images/users/"; // Change this to your desired directory
     $targetFile = $targetDir . basename($_FILES["img"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
@@ -42,12 +41,12 @@ if (isset($_FILES["img"]) && !empty($_FILES["img"]["name"])) {
 
     // Move the uploaded file to the specified directory
     if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile)) {
-        // Remove the first letter from the file path
-        $targetFile = substr($targetFile, 1);
+        
+
 
         // Update the database with the modified file path and other form data
-        $stmt = $conn->prepare("UPDATE posts SET title=?, description=?, category=?, status=?, img_path=? WHERE id=?");
-        $stmt->bind_param("sssssi", $title, $desc, $category, $status, $targetFile, $id);
+        $stmt = $conn->prepare("UPDATE users SET name=?, email=?, img_path=? WHERE id=?");
+        $stmt->bind_param("sssi", $name, $email, $targetFile, $id);
     } else {
         $response = array('status' => 0, 'message' => 'Sorry, there was an error uploading your file.');
         echo json_encode($response);
@@ -55,17 +54,18 @@ if (isset($_FILES["img"]) && !empty($_FILES["img"]["name"])) {
     }
 } else {
     // No image uploaded, update the database without the image path
-    $stmt = $conn->prepare("UPDATE posts SET title=?, description=?, category=?, status=? WHERE id=?");
-    $stmt->bind_param("ssssi", $title, $desc, $category, $status, $id);
+
+    $stmt = $conn->prepare("UPDATE users SET name=?, email=? WHERE id=?");
+    $stmt->bind_param("ssi", $name, $email, $id);
 }
 
 // Execute the statement
 if ($stmt->execute()) {
     // Update successful
-    $response = array('status' => 1, 'message' => 'Post updated successfully');
+    $response = array('status' => 1, 'message' => 'User updated successfully');
 } else {
     // Update failed
-    $response = array('status' => 0, 'message' => 'Error updating post: ' . $stmt->error);
+    $response = array('status' => 0, 'message' => 'Error updating user: ' . $stmt->error);
 }
 
 // Close the statement

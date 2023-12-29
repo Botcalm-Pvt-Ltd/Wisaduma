@@ -1,23 +1,25 @@
 <?php
 
-include('./layouts/db.php');
+include('./include/db.php');
 
 // post values
-$id = $_POST["post_id"];
 $title = $_POST["title"];
 $desc = $_POST["description"];
 $category = $_POST["category"];
-$status = $_POST["status"];
+$userID = $_POST["post_by"];
+
+
+$status = 0;
 
 // Check if an image file is uploaded
 if (isset($_FILES["img"]) && !empty($_FILES["img"]["name"])) {
     // File upload handling
-    $targetDir = "../assets/images/"; // Change this to your desired directory
+    $targetDir = "./assets/images/"; // Change this to your desired directory
     $targetFile = $targetDir . basename($_FILES["img"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
-    // Check if image file is a actual image or fake image
+    // Check if image file is an actual image or fake image
     $check = getimagesize($_FILES["img"]["tmp_name"]);
     if ($check === false) {
         $response = array('status' => 0, 'message' => 'File is not an image.');
@@ -42,30 +44,30 @@ if (isset($_FILES["img"]) && !empty($_FILES["img"]["name"])) {
 
     // Move the uploaded file to the specified directory
     if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile)) {
-        // Remove the first letter from the file path
-        $targetFile = substr($targetFile, 1);
+        //not Remove the first letter from the file path
+        $targetFile = substr($targetFile, 0);
 
         // Update the database with the modified file path and other form data
-        $stmt = $conn->prepare("UPDATE posts SET title=?, description=?, category=?, status=?, img_path=? WHERE id=?");
-        $stmt->bind_param("sssssi", $title, $desc, $category, $status, $targetFile, $id);
+        $stmt = $conn->prepare("INSERT INTO posts (title, description, category, status, img_path, post_by) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $title, $desc, $category, $status, $targetFile, $userID);
     } else {
         $response = array('status' => 0, 'message' => 'Sorry, there was an error uploading your file.');
         echo json_encode($response);
         exit;
     }
 } else {
-    // No image uploaded, update the database without the image path
-    $stmt = $conn->prepare("UPDATE posts SET title=?, description=?, category=?, status=? WHERE id=?");
-    $stmt->bind_param("ssssi", $title, $desc, $category, $status, $id);
+    // No image uploaded, insert into the database without the image path
+    $stmt = $conn->prepare("INSERT INTO posts (title, description, category, status, post_by) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssi", $title, $desc, $category, $status, $userID);
 }
 
 // Execute the statement
 if ($stmt->execute()) {
-    // Update successful
-    $response = array('status' => 1, 'message' => 'Post updated successfully');
+    // Insertion successful
+    $response = array('status' => 1, 'message' => 'Post added successfully');
 } else {
-    // Update failed
-    $response = array('status' => 0, 'message' => 'Error updating post: ' . $stmt->error);
+    // Insertion failed
+    $response = array('status' => 0, 'message' => 'Error adding post: ' . $stmt->error);
 }
 
 // Close the statement

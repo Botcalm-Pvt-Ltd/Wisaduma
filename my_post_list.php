@@ -1,0 +1,197 @@
+<?php
+session_start();
+include('./include/db.php');
+
+if (isset($_SESSION['user'])) {
+  $userId = $_SESSION['user'];
+}
+
+?>
+
+<div class="my-3" style="cursor: pointer; ">
+   <a href="./dashboard.php" style="text-decoration: none; color: #0069AC; font-size: 16px;"> <i class="fa fa-arrow-left "></i>
+    Back To Home </a>
+</div>
+
+<div>
+  <div class="fh5co_heading fh5co_heading_border_bottom py-2 my-3">My Posts</div>
+</div>
+
+<!-- category 01 load -->
+<div class="owl-carousel owl-theme" id="slider2">
+  <?php
+  $result = $conn->query("SELECT * FROM `posts` WHERE `status` = 1 AND `post_by` = $userId ORDER BY `create_at` DESC");
+  while ($row = $result->fetch_assoc()) {
+
+    $post_by = $row["post_by"];
+    $user = $conn->query("SELECT `name` FROM `users` WHERE `id` = $post_by");
+    $user_catch = $user->fetch_assoc();
+    $user_c = $user_catch["name"];
+
+
+    // get like count
+    $post_id = $row["id"];
+    $like = $conn->query("SELECT COUNT(`id`) as like_count FROM `likes` WHERE `post_id` = $post_id");
+    $like_count = $like->fetch_assoc();
+    $likeCount = $like_count['like_count'];
+
+    
+
+  ?>
+
+    <div class="item px-2">
+      <div class="fh5co_hover_news_img">
+        <img src=" <?php echo $row["img_path"]  ?>" alt="" id="btnView<?php echo $row["id"]; ?>" class="custom_img" />
+        <div >
+
+          <div class="cont-category w-10"><?php echo $row["category"]; ?></div>
+          <div class="cont-tittle"> <?php echo mb_strimwidth($row["title"], 0, 26, "...");   ?></div>
+          <div class="cont-person"><?php echo $user_c;  ?></div>
+          <div class="cont-location">Thihagada</div>
+
+          <!-- Add a unique identifier to each thumbs-up icon using the post ID -->
+          <i class="fa fa-thumbs-up " id="like_btn<?php echo $row["id"]; ?>">  <?php echo $likeCount; ?></i>
+
+            <div class="d-flex align-items-center mb-2">
+                <button id="btnDelete<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</button>
+                <button id="btnEdit<?php echo $row["id"]; ?>" class="btn btn-sm btn-primary ml-2">Edit</button>
+            </div>
+
+        </div>
+
+
+        <script>
+
+            //show post
+          $("#btnView<?php echo $row["id"]; ?>").click(function() {
+            // Get the modal ID from PHP value
+            var modal_id = '<?php echo $row["id"] ?>';
+            var user_id = '<?php echo $userId; ?>';
+
+            // Show a loading spinner in the modal content area
+            $('#modalBTNLoad').modal('show');
+
+            $("#modalDivLoad").html(
+              `<div class=" h-custom">
+               <div class="spinner-border text-warning" role="status">
+                 <span class="visually-hidden">Loading...</span>
+               </div>
+               </div>`);
+
+            $.get("post_view.php", {
+                modal_id: modal_id,
+                login_user_id: user_id
+              })
+              .done(function(data) {
+                $("#modalDivLoad").html(data);
+              });
+          });
+
+
+            //delete Post
+          $("#btnDelete<?php echo $row["id"]; ?>").click(function() {
+            // Get the modal ID from PHP value
+            var modal_id = '<?php echo $row["id"] ?>';
+            
+
+            // Show a loading spinner in the modal content area
+            $('#modalBTNLoad').modal('show');
+
+            $("#modalDivLoad").html(
+              `<div class=" h-custom">
+               <div class="spinner-border text-danger" role="status">
+                 <span class="visually-hidden"></span>
+               </div>
+               </div>`);
+            $.get("my_post_delete.php", {
+                modal_id: modal_id,
+
+              })
+              .done(function(data) {
+                $("#modalDivLoad").html(data);
+              });
+          });
+
+
+            //Edit Post
+            $("#btnEdit<?php echo $row["id"]; ?>").click(function() {
+            // Get the modal ID from PHP value
+            var modal_id = '<?php echo $row["id"] ?>';
+            
+
+            // Show a loading spinner in the modal content area
+            $('#modalBTNLoad').modal('show');
+
+            $("#modalDivLoad").html(
+              `<div class=" h-custom">
+               <div class="spinner-border text-danger" role="status">
+                 <span class="visually-hidden"></span>
+               </div>
+               </div>`);
+            $.get("my_post_edit.php", {
+                modal_id: modal_id,
+
+              })
+              .done(function(data) {
+                $("#modalDivLoad").html(data);
+              });
+          });
+
+
+          
+        </script>
+
+        <script>
+          $(document).ready(function() {
+           
+            $("#like_btn<?php echo $row["id"]; ?>").click(function() {
+
+              // Get the post ID from the data attribute
+              var postId = '<?php echo $row["id"] ?>';
+              var userId = '<?php echo $userId; ?>';
+
+
+              // Send an AJAX request to update the likes
+              $.ajax({
+                type: "POST",
+                url: "like_handler.php",
+                data: {
+                  post_id: postId,
+                  user_id:userId
+                },
+                dataType: "json",
+                success: function(data) {
+                  if (data.status === "liked") {
+                    
+                    // Update the like count
+                    $( "#like_btn<?php echo $row["id"]; ?>").html(" "+data.likeCount);
+                    $("#like_btn<?php echo $row["id"]; ?>").addClass("liked");
+
+                    
+                  } else if (data.status === "unliked") {
+                    // Update the like count
+                    $( "#like_btn<?php echo $row["id"]; ?>").html(" "+data.likeCount);
+                    $("#like_btn<?php echo $row["id"]; ?>").removeClass("liked");
+
+                  
+                  }
+                },
+               
+              });
+            });
+          });
+        </script>
+
+
+
+
+
+      </div>
+    </div>
+  <?php
+  }
+  ?>
+</div>
+</div>
+
+<script defer src="./assets/js/main.js"></script>

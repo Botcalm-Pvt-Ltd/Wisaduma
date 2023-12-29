@@ -61,20 +61,27 @@ img.profile-photo-md {
 }
 
 img.profile-photo-sm {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
+  border:1px solid #5A6F7F;
 }
 
 .comment-sec {
   display: flex;
   align-items: center;
-  justify-content: center;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 100%;
+  justify-content:center;
+  width: 100% !important;
+  gap: 5px;
+  /* border: 1px solid red; */
+}
+.comment-sec-2{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100% !important;
   gap: 10px;
+  font-size: 14px;
 }
 
 .cont-category {
@@ -122,4 +129,38 @@ img.profile-photo-sm {
   .mobile-image {
     display: block;
   }
+}
+
+
+
+.liked {
+  color: #007bff;
+  /* Change this to your desired color */
+}
+
+#commentInput {
+  width: 100%;
+  /* Set width to 100% for full width */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.h-custom{
+  width: 100%px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liked{
+  color: #1475B3;
+}
+
+.close-btn:focus{
+  outline: 0 !important;
+}
+
+.my-border{
+  border: 1px solid red;
 }

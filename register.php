@@ -132,7 +132,7 @@ include('./include/db.php')
                 toastr.success('You have been registered successfully!');
 
                 setTimeout(function() {
-                  window.location.replace("./login.php");
+                  window.location.replace("./index.php");
                 }, 3000);
 
               } else if (data.status == 2) {

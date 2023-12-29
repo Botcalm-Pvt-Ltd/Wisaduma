@@ -1,3 +1,7 @@
+<?php
+include('./include/db.php')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,7 +46,7 @@
           <label class="form-check-label " for="exampleCheck1">Remember for 30 days</label>
         </div>
 
-        <button type="submit" class="btn btn-primary w-100"> <a href="Dashboard.html" class="redirect-to-link-dash">LogIn</a></button>
+        <button type="submit" class="btn btn-primary w-100"> LogIn</button>
         
       </form>
 
@@ -128,7 +132,7 @@
                 toastr.success('Login successfully!');
 
                 setTimeout(function() {
-                  window.location.replace("./login.php");
+                  window.location.replace("./dashboard.php");
                 }, 3000);
 
               } else if (data.status == 2) {
