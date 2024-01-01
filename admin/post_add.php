@@ -113,7 +113,13 @@ include('./layouts/db.php');
                         if (data.status == 1) {
                             toastr.success('Post has been add successfully!');
                             $('#modalBTNLoad').modal('hide');
+                            
                             $("#postsList").load("post_list.php");
+                            $("#postsListRoadCrack").load("post_list_road_crack.php");
+                            $("#postsListTreeFallen").load("post_list_tree_fallen.php");
+                            $("#postsListUnsafeElectrical").load("post_list_unsafe_electrical.php");
+                            $("#postsListOther").load("post_list_other.php");
+
                         } else {
                             $("#error").show().html("Error message: " + data.message);
                         }

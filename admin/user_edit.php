@@ -33,33 +33,20 @@ $stmt->close();
 <div class="modal-body">
     <form id="formusers" method="post" action="users_edit_submit.php">
         <div class="modal-body">
-            <div class="mb-2">
-                <label for="fname" class="form-label">First Name</label>
-                <input type="text" class="form-control" name="fname" value="<?php echo $users['fname'] ?>">
+            <div class="mb-2 d-flex ">
+                <img src=".<?php echo $users['img_path'] ?>" alt="" style="width: 50px; height: 50px; border: 1px solid #000;">
+                <input type="file" class="form-control ml-5" name="img" >
             </div>
             <div class="mb-2">
-                <label for="lname" class="form-label">Last Name</label>
-                <input type="text" class="form-control" name="lname" value="<?php echo $users['lname'] ?>">
+                <label for="lname" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" value="<?php echo $users['name'] ?>">
             </div>
-            <div class="mb-2">
-                <label for="pro_title" class="form-label">National ID</label>
-                <input type="text" class="form-control" name="national_id" value="<?php echo $users['national_id'] ?>">
-            </div>
-            <div class="mb-2">
-                <label for="pro_title" class="form-label">Contact Number</label>
-                <input type="text" class="form-control" name="contact_num" value="<?php echo $users['contact_num'] ?>">
-            </div>
+        
             <div class="mb-2">
                 <label for="pro_title" class="form-label">Email</label>
                 <input type="text" class="form-control" name="email" value="<?php echo $users['email'] ?>">
             </div>
-            <div class="mb-2">
-                <label for="status" class="form-label">Gender</label>
-                <select name="gender" class="form-control">
-                    <option value="1" <?php echo ($users['gender'] == 1) ? "selected" : ""; ?>>Male</option>
-                    <option value="0" <?php echo ($users['gender'] == 0) ? "selected" : ""; ?>>Female</option>
-                </select>
-            </div>
+          
             
             <div class="mb-2">
                 <label for="status" class="form-label">Status</label>
@@ -83,16 +70,7 @@ $stmt->close();
     $(document).ready(function() {
         $("#formusers").validate({
             rules: {
-                fname: {
-                    required: true,
-                },
-                lname: {
-                    required: true,
-                },
-                national_id: {
-                    required: true,
-                },
-                contact_num: {
+                name: {
                     required: true,
                 },
                 email: {
@@ -102,16 +80,7 @@ $stmt->close();
             },
             messages: {
                 fname: {
-                    required: "first name is required",
-                },
-                lname: {
-                    required: "first name is required",
-                },
-                national_id: {
-                    required: "national ID number is required",
-                },
-                contact_num: {
-                    required: "contact number is required",
+                    required: " name is required",
                 },
                 email: {
                     required: "email is required",
@@ -135,33 +104,35 @@ $stmt->close();
                 }
             },
             submitHandler: function(form) {
-                var $form = $(form);
-                $.ajax({
-                    type: 'POST',
-                    url: $form.attr('action'),
-                    dataType: 'json',
-                    data: $form.serialize(),
-                    success: function(data) {
-                        if (data.status == 1) {
+            var $form = $(form);
+            var formData = new FormData(form);
 
-                            // get success message
+            $.ajax({
+                type: 'POST',
+                url: $form.attr('action'),
+                dataType: 'json',
+                processData: false,  // Important! Don't process the files
+                contentType: false,  // Important! Set content type to false
+
+                // Add the FormData object to the data property
+                data: formData,
+
+                success: function(data) {
+                    if (data.status == 1) {
                             toastr.success('User has been updated successfully!');
-
-                            // get hide modal
                             $('#modalBTNLoad').modal('hide');
-
-                            // load table
                             $("#usersList").load("user_list.php");
                         } else {
-                            $("#error").show().html("Error message: " + data.message);
+                            toastr.error('Something went wrong!');
                         }
-                    },
-                    error: function(xhr, textStatus, errorThrown) {
-                        $("#error").show().html("AJAX request failed: " + errorThrown);
-                    }
-                });
-                return false; // Prevent the form from submitting via the browser
-            }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    // your existing error handling
+                }
+            });
+
+            return false; // Prevent the form from submitting via the browser
+        }
         });
     });
 </script>

@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin_user'])) {
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="./assets/images/Top-logo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
 
   <!-- Navbar start-->
@@ -114,7 +114,6 @@ if (!isset($_SESSION['admin_user'])) {
 
 
 <!-- jslink start -->
-<
 <?php require('./layouts/jslink.php')  ?>
 <!-- jslink end -->
 

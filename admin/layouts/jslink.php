@@ -12,7 +12,8 @@
 <script src="plugins/chart.js/Chart.min.js"></script>
 
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<!-- <script src="dist/js/demo.js"></script> -->
+
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 
 <!-- Toastr -->

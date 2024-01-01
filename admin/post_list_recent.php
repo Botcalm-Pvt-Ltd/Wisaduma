@@ -1,4 +1,4 @@
-<?php  
+<?php
 include('./layouts/db.php');
 ?>
 
@@ -6,7 +6,7 @@ include('./layouts/db.php');
   <div class="card-header">
     <h3 class="card-title">Current Post List</h3>
 
-
+   
   </div>
   <!-- /.card-header -->
   <div class="card-body table-responsive p-0">
@@ -15,26 +15,47 @@ include('./layouts/db.php');
         <tr>
           <th>ID</th>
           <th>Image</th>
-          <th>Name</th>
-          <th>Email</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Post By</th>
+
           <th>Status</th>
           <th>Actions</th>
-          
         </tr>
       </thead>
 
       <tbody>
         <?php
-        $result = $conn->query("SELECT * FROM `users` ORDER BY `create_at` DESC");
+        $result = $conn->query("SELECT * FROM `posts` WHERE `status`='0' ORDER BY `create_at` DESC");
         while ($row = $result->fetch_assoc()) {
+          $post_by = $row["post_by"];
+         
+          $user = $conn->query("SELECT `name` FROM `users` WHERE `id` = $post_by");
+          $user_catch = $user->fetch_assoc();
+          $user_c = $user_catch["name"];
         ?>
           <!-- ... -->
           <tr>
             <td><?php echo $row["id"]; ?></td>
-            <td><img src=".<?php echo $row["img_path"]; ?>" alt="" style="width: 50px; height: 50px; border: 1px solid #000;"></td>
-            <td><?php echo $row["name"]; ?></td>
-            <td><?php echo $row["email"]; ?></td>
+            <td><?php echo mb_strimwidth($row["title"], 0, 20, "..."); ?></td>
+            <td><img src=".<?php echo $row["img_path"]  ?>" alt="" width="80" height="40"></td>
+            <td><?php echo mb_strimwidth($row["description"], 0, 20, "..."); ?></td>
+            <td>
 
+              <?php
+              if ($row["category"] == 'Road Crack') {
+                echo '<span class="text-dark font-weight-bold">Road Crack</span>';
+              } elseif ($row["category"] == 'Tree fallen') {
+                echo '<span class="text-warning font-weight-bold">Tree fallen</span>';
+              } elseif ($row["category"] == 'Unsafe Electrical') {
+                echo '<span class="text-danger font-weight-bold">Unsafe Electrical</span>';
+              } else {
+                echo '<span class="text-primary font-weight-bold">Others</span>';
+              }
+              ?>
+            </td>
+            <td><?php echo $user_c; ?></td>
             <td>
               <?php
               if ($row["status"] == '1') {
@@ -44,8 +65,15 @@ include('./layouts/db.php');
               }
               ?>
             </td>
-
             <td>
+
+              <?php
+              if ($row["status"] == '1') {
+                echo '<button id="btnReject' . $row["id"] . '" class="btn btn-xs btn-danger">Reject</button>';
+              } else {
+                echo '<button id="btnApprove' . $row["id"] . '" class="btn btn-xs btn-success">Approve</button>';
+              }
+              ?>
               <button id="btnEdit<?php echo $row["id"] ?>" class="btn btn-xs btn-info">Edit</button>
               <button id="btnView<?php echo $row["id"] ?>" class="btn btn-xs btn-warning">view</button>
               <button id="btnDelete<?php echo $row["id"] ?>" class="btn btn-xs btn-dark">Delete</button>
@@ -54,7 +82,7 @@ include('./layouts/db.php');
 
 
           <script type="text/javascript">
-            //  view user on modal
+            //  view post on modal
             $("#btnView<?php echo $row["id"] ?>").click(function() {
               var modal_id = '<?php echo $row["id"] ?>';
 
@@ -66,7 +94,7 @@ include('./layouts/db.php');
                                 </div>
                               </div>`);
 
-              $.get("user_view.php", {
+              $.get("post_view.php", {
                   modal_id: modal_id
                 })
                 .done(function(data) {
@@ -75,7 +103,7 @@ include('./layouts/db.php');
             });
 
 
-            //  edit user on modal
+            //  edit post on modal
             $("#btnEdit<?php echo $row["id"] ?>").click(function() {
               var modal_id = '<?php echo $row["id"] ?>';
 
@@ -87,7 +115,7 @@ include('./layouts/db.php');
                                 </div>
                               </div>`);
 
-              $.get("user_edit.php", {
+              $.get("post_edit.php", {
                   modal_id: modal_id
                 })
                 .done(function(data) {
@@ -96,7 +124,49 @@ include('./layouts/db.php');
             });
 
 
-            // delete user
+            // reject post
+            $("#btnReject<?php echo $row["id"] ?>").click(function() {
+              var modal_id = '<?php echo $row["id"] ?>';
+
+              $('#modalBTNLoad2').modal('show');
+              $("#modalDivLoad2").html(
+                `<div class="d-flex justify-content-center align-content-center h-100 w-100">
+                                <div class="spinner-border text-danger" role="status">
+                                  <span class="visually-hidden">Loading...</span>
+                                </div>
+                              </div>`);
+
+              $.get("post_reject.php", {
+                  modal_id: modal_id
+                })
+                .done(function(data) {
+                  $("#modalDivLoad2").html(data);
+                });
+            });
+
+
+            // reject Approve
+            $("#btnApprove<?php echo $row["id"] ?>").click(function() {
+              var modal_id = '<?php echo $row["id"] ?>';
+
+              $('#modalBTNLoad2').modal('show');
+              $("#modalDivLoad2").html(
+                `<div class="d-flex justify-content-center align-content-center h-100 w-100">
+                                <div class="spinner-border text-success" role="status">
+                                  <span class="visually-hidden">Loading...</span>
+                                </div>
+                              </div>`);
+
+              $.get("post_approve.php", {
+                  modal_id: modal_id
+                })
+                .done(function(data) {
+                  $("#modalDivLoad2").html(data);
+                });
+            });
+
+
+            // reject Approve
             $("#btnDelete<?php echo $row["id"] ?>").click(function() {
               var modal_id = '<?php echo $row["id"] ?>';
 
@@ -108,16 +178,17 @@ include('./layouts/db.php');
                                 </div>
                               </div>`);
 
-              $.get("user_delete.php", {
+              $.get("post_delete.php", {
                   modal_id: modal_id
                 })
                 .done(function(data) {
                   $("#modalDivLoad2").html(data);
                 });
             });
-
           </script>
-         
+
+
+
         <?php
         }
         ?>
@@ -125,6 +196,8 @@ include('./layouts/db.php');
       </tbody>
     </table>
   </div>
+
+
   <!-- /.card-body -->
 </div>
 <!-- /.card -->

@@ -31,37 +31,19 @@ $stmt->close();
     </button>
 </div>
 <div class="modal-body">
-    <div class="w-100 d-flex ">
-        <p class="font-weight-bold w-25">First Name</p>
-        <p class=""><?php echo $users['fname']; ?></p>
+    <div class="w-100 d-flex align-items-center ">
+        <p class="font-weight-bold w-25">Image</p>
+        <img src=".<?php echo $users["img_path"]; ?>" style="width: 50px; height: 50px; border: 1px solid #000;" alt="">
     </div>
     <div class="w-100 d-flex ">
-        <p class="font-weight-bold w-25">Last Name</p>
-        <p class=""><?php echo $users['lname']; ?></p>
-    </div>
-    <div class="w-100 d-flex ">
-        <p class="font-weight-bold w-25">National ID</p>
-        <p class=""><?php echo $users['national_id']; ?></p>
-    </div>
-    <div class="w-100 d-flex ">
-        <p class="font-weight-bold w-25">Contact Number</p>
-        <p class=""><?php echo $users['contact_num']; ?></p>
+        <p class="font-weight-bold w-25">Name</p>
+        <p class=""><?php echo $users['name']; ?></p>
     </div>
     <div class="w-100 d-flex ">
         <p class="font-weight-bold w-25">Email</p>
         <p class=""><?php echo $users['email']; ?></p>
     </div>
-    <div class="w-100 d-flex ">
-        <p class="font-weight-bold w-25">Gender</p>
-        <p class="">
-            <?php if ($users["gender"] == '1') {
-            echo 'Male';
-            } else {
-             echo 'Female';
-            }?>
-         </p>
-    </div>
-
+  
     <div class="w-100 d-flex ">
         <p class="font-weight-bold w-25">Status</p>
         <p class="">

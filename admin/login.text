@@ -1,0 +1,15 @@
+
+#login for web
+
+email : test@gmail.com
+password : 12345
+
+
+//////////////////////////////////////////////////////
+
+#login for Admin
+
+url : url/admin
+
+email : admin@gmail.com
+password : 12345

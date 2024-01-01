@@ -39,8 +39,17 @@ $m_id = intval($_GET["modal_id"]);
                         toastr.error('Post has been rejected successfully!');
                         // get hide modal
                         $('#modalBTNLoad2').modal('hide');
+                      
                         // load table
                         $("#postsList").load("post_list.php");
+                        $("#postsListRoadCrack").load("post_list_road_crack.php");
+                        $("#postsListTreeFallen").load("post_list_tree_fallen.php");
+                        $("#postsListUnsafeElectrical").load("post_list_unsafe_electrical.php");
+                        $("#postsListOther").load("post_list_other.php");
+                        $("#postsListRecent").load("post_list_recent.php");
+
+                        
+
                     }
                 }
             });

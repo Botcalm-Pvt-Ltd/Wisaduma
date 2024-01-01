@@ -1,21 +1,12 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #1c1818;">
     <!-- Brand Logo -->
-    <a href="index.php" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">WISADUMA ADMIN</span>
+    <a href="index.php" class="d-flex align-items-center justify-content-center p-2">
+      <img src="./assets/images/Top-logo.png" alt="AdminLTE Logo" class="img-fluid" width="80px">
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div>
+      
 
       
 
@@ -27,29 +18,84 @@
           
           <li class="nav-header">Options</li>
           
+          <li class="nav-item">
+            <a href="index.php" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
           
           <li class="nav-item">
             <a href="post.php" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+            <i class="nav-icon fas fa-globe-europe"></i>
               <p>
-                Post Management
+                All Posts
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="post_recent.php" class="nav-link">
+            <i class="nav-icon fas fa-running"></i>
+              <p>
+                Recent Posts
               </p>
             </a>
           </li>
 
           <li class="nav-item">
             <a href="users.php" class="nav-link">
-            <i class="nav-icon fas fa-tree"></i>
+            <i class="nav-icon fas fa-users-cog"></i>
               <p>
                 User Management
               </p>
             </a>
           </li>
 
+
+          <li class="nav-item">
+            <a href="post_road_rack.php" class="nav-link">
+            <i class="nav-icon fas fa-road"></i>
+              <p>
+                Posts Road Rack
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="post_tree_fallen.php" class="nav-link">
+            <i class="nav-icon fas fa-tree"></i>
+              <p>
+                Posts Tree Fallen
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="post_unsafe_electrical.php" class="nav-link">
+            <i class="nav-icon fas fa-charging-station"></i>
+              <p>
+                Posts Unsafe Electrical
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="post_other.php" class="nav-link">
+            <i class="nav-icon fas fa-cloud-sun"></i>
+              <p>
+                Posts Other
+              </p>
+            </a>
+          </li>
+
+         
           
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
+    
     </div>
-    <!-- /.sidebar -->
+  
   </aside>

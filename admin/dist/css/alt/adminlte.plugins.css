@@ -1012,7 +1012,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .select2-container--default .select2-dark .select2-results__option--highlighted,
 .select2-dark .select2-container--default .select2-results__option--highlighted {
-  background-color: #343a40;
+ background-color: #343a40;
   color: #fff;
 }
 
@@ -1030,7 +1030,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .select2-container--default .select2-dark .select2-selection--multiple .select2-selection__choice,
 .select2-dark .select2-container--default .select2-selection--multiple .select2-selection__choice {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #292d32;
   color: #fff;
 }
@@ -2095,7 +2095,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .select2-container--default .select2-gray-dark .select2-results__option--highlighted,
 .select2-gray-dark .select2-container--default .select2-results__option--highlighted {
-  background-color: #343a40;
+ background-color: #343a40;
   color: #fff;
 }
 
@@ -2113,7 +2113,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .select2-container--default .select2-gray-dark .select2-selection--multiple .select2-selection__choice,
 .select2-gray-dark .select2-container--default .select2-selection--multiple .select2-selection__choice {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #292d32;
   color: #fff;
 }
@@ -2134,7 +2134,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 }
 
 .dark-mode .select2-selection {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #6c757d;
 }
 
@@ -2143,7 +2143,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 }
 
 .dark-mode .select2-selection--single {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #6c757d;
 }
 
@@ -2153,13 +2153,13 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .dark-mode .select2-dropdown .select2-search__field,
 .dark-mode .select2-search--inline .select2-search__field {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #6c757d;
   color: white;
 }
 
 .dark-mode .select2-dropdown {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #6c757d;
   color: white;
 }
@@ -2596,7 +2596,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .select2-container--default .dark-mode .select2-dark .select2-results__option--highlighted,
 .dark-mode .select2-dark .select2-container--default .select2-results__option--highlighted {
-  background-color: #343a40;
+ background-color: #343a40;
   color: #fff;
 }
 
@@ -2614,7 +2614,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .select2-container--default .dark-mode .select2-dark .select2-selection--multiple .select2-selection__choice,
 .dark-mode .select2-dark .select2-container--default .select2-selection--multiple .select2-selection__choice {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #292d32;
   color: #fff;
 }
@@ -3679,7 +3679,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .select2-container--default .dark-mode .select2-gray-dark .select2-results__option--highlighted,
 .dark-mode .select2-gray-dark .select2-container--default .select2-results__option--highlighted {
-  background-color: #343a40;
+ background-color: #343a40;
   color: #fff;
 }
 
@@ -3697,7 +3697,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .select2-container--default .dark-mode .select2-gray-dark .select2-selection--multiple .select2-selection__choice,
 .dark-mode .select2-gray-dark .select2-container--default .select2-selection--multiple .select2-selection__choice {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #292d32;
   color: #fff;
 }
@@ -4074,7 +4074,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .icheck-dark > input:first-child:checked + label::before,
 .icheck-dark > input:first-child:checked + input[type="hidden"] + label::before {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #343a40;
 }
 
@@ -4378,7 +4378,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .icheck-gray-dark > input:first-child:checked + label::before,
 .icheck-gray-dark > input:first-child:checked + input[type="hidden"] + label::before {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #343a40;
 }
 
@@ -4511,7 +4511,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .dark-mode .icheck-dark > input:first-child:checked + label::before,
 .dark-mode .icheck-dark > input:first-child:checked + input[type="hidden"] + label::before {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #343a40;
 }
 
@@ -4815,7 +4815,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .dark-mode .icheck-gray-dark > input:first-child:checked + label::before,
 .dark-mode .icheck-gray-dark > input:first-child:checked + input[type="hidden"] + label::before {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #343a40;
 }
 
@@ -4950,7 +4950,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 }
 
 .dark-mode .swal2-popup {
-  background-color: #343a40;
+ background-color: #343a40;
   color: #e9ecef;
 }
 
@@ -6031,7 +6031,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 }
 
 .pace-mac-osx-dark .pace .pace-progress {
-  background-color: #343a40;
+ background-color: #343a40;
   box-shadow: inset -1px 0 #343a40, inset 0 -1px #343a40, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, 0.3);
 }
 
@@ -8520,7 +8520,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 }
 
 .pace-mac-osx-gray-dark .pace .pace-progress {
-  background-color: #343a40;
+ background-color: #343a40;
   box-shadow: inset -1px 0 #343a40, inset 0 -1px #343a40, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, 0.3);
 }
 
@@ -9046,7 +9046,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 }
 
 .dark-mode .daterangepicker .ranges li:hover {
-  background-color: #343a40;
+ background-color: #343a40;
 }
 
 .dark-mode .daterangepicker.show-ranges.ltr .drp-calendar {
@@ -9063,7 +9063,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 }
 
 .dark-mode .daterangepicker .calendar-table {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #4b545c;
 }
 
@@ -9081,7 +9081,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 .dark-mode .daterangepicker select.minuteselect,
 .dark-mode .daterangepicker select.secondselect,
 .dark-mode .daterangepicker select.ampmselect {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #4b545c;
 }
 
@@ -9133,7 +9133,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .dark-mode .jsgrid-header-row > .jsgrid-header-cell,
 .dark-mode .jsgrid-row > .jsgrid-cell {
-  background-color: #343a40;
+ background-color: #343a40;
 }
 
 .dark-mode .jsgrid-alt-row > .jsgrid-cell {

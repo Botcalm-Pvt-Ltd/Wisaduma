@@ -584,7 +584,7 @@
 }
 
 .dark-mode .info-box {
-  background-color: #343a40;
+ background-color: #343a40;
   color: #fff;
 }
 
@@ -795,7 +795,7 @@
 }
 
 .dark-mode .timeline > div > .timeline-item {
-  background-color: #343a40;
+ background-color: #343a40;
   color: #fff;
   border-color: #6c757d;
 }
@@ -862,7 +862,7 @@
 }
 
 .dark-mode .products-list > .item {
-  background-color: #343a40;
+ background-color: #343a40;
   color: #fff;
   border-bottom-color: #6c757d;
 }
@@ -997,7 +997,7 @@
 .direct-chat-contacts {
   -webkit-transform: translate(101%, 0);
   transform: translate(101%, 0);
-  background-color: #343a40;
+ background-color: #343a40;
   bottom: 0;
   color: #fff;
   height: 250px;
@@ -1148,7 +1148,7 @@
 }
 
 .direct-chat-dark .right > .direct-chat-text {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #343a40;
   color: #fff;
 }
@@ -1338,7 +1338,7 @@
 }
 
 .direct-chat-gray-dark .right > .direct-chat-text {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #343a40;
   color: #fff;
 }
@@ -1436,7 +1436,7 @@
 }
 
 .dark-mode .direct-chat-dark .right > .direct-chat-text {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #343a40;
   color: #fff;
 }
@@ -1626,7 +1626,7 @@
 }
 
 .dark-mode .direct-chat-gray-dark .right > .direct-chat-text {
-  background-color: #343a40;
+ background-color: #343a40;
   border-color: #343a40;
   color: #fff;
 }

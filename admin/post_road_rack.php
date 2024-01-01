@@ -40,7 +40,7 @@ if (!isset($_SESSION['admin_user'])) {
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Post</h1>
+            <h1 class="m-0">Road Crack</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -58,7 +58,7 @@ if (!isset($_SESSION['admin_user'])) {
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-12" id="postsList">
+          <div class="col-12" id="postsListRoadCrack">
             
           </div>
         </div>
@@ -107,14 +107,14 @@ if (!isset($_SESSION['admin_user'])) {
 
 <script>
         // Load Project List
-        $("#postsList").load("post_list.php", {
+        $("#postsListRoadCrack").load("post_list_road_crack.php", {
             limit: 25
         });
 </script>
 
 
 <!-- jslink start -->
-
+<
 <?php require('./layouts/jslink.php')  ?>
 <!-- jslink end -->
 

@@ -27,7 +27,7 @@ include('./layouts/db.php');
 
       <tbody>
         <?php
-        $result = $conn->query("SELECT * FROM `posts` ORDER BY `create_at` DESC");
+        $result = $conn->query("SELECT * FROM `posts` WHERE `category`='Unsafe Electrical' ORDER BY `create_at` DESC");
         while ($row = $result->fetch_assoc()) {
           $post_by = $row["post_by"];
          
@@ -166,7 +166,7 @@ include('./layouts/db.php');
             });
 
 
-            // reject Approve
+            // delete
             $("#btnDelete<?php echo $row["id"] ?>").click(function() {
               var modal_id = '<?php echo $row["id"] ?>';
 

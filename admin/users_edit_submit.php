@@ -4,19 +4,59 @@ include('./layouts/db.php');
 
 // post values
 $id = $_POST["user_id"];
-$fname = $_POST["fname"];
-$lname = $_POST["lname"];
-$national_id = $_POST["national_id"];
-$contact_num = $_POST["contact_num"];
+$name = $_POST["name"];
 $email = $_POST["email"];
-$gender = $_POST["gender"];
 $status = $_POST["status"];
 
-// Prepare the update statement
-$stmt = $conn->prepare("UPDATE users SET fname=?, lname=?, national_id=?, contact_num=?, email=?, gender=?, status=? WHERE id=?");
+// Check if an image file is uploaded
+if (isset($_FILES["img"]) && !empty($_FILES["img"]["name"])) {
+    // File upload handling
+    $targetDir = "../assets/images/users"; // Change this to your desired directory
+    $targetFile = $targetDir . basename($_FILES["img"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
-// Bind the parameters
-$stmt->bind_param("sssssssi", $fname, $lname, $national_id, $contact_num, $email, $gender, $status, $id);
+    // Check if image file is a actual image or fake image
+    $check = getimagesize($_FILES["img"]["tmp_name"]);
+    if ($check === false) {
+        $response = array('status' => 0, 'message' => 'File is not an image.');
+        echo json_encode($response);
+        exit;
+    }
+
+    // Check file size (you can adjust the size as needed)
+    if ($_FILES["img"]["size"] > 500000) {
+        $response = array('status' => 0, 'message' => 'Sorry, your file is too large.');
+        echo json_encode($response);
+        exit;
+    }
+
+    // Allow certain file formats (you can add or remove formats as needed)
+    $allowedFormats = array("jpg", "jpeg", "png", "gif");
+    if (!in_array($imageFileType, $allowedFormats)) {
+        $response = array('status' => 0, 'message' => 'Sorry, only JPG, JPEG, PNG, and GIF files are allowed.');
+        echo json_encode($response);
+        exit;
+    }
+
+    // Move the uploaded file to the specified directory
+    if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile)) {
+        // Remove the first letter from the file path
+        $targetFile = substr($targetFile, 1);
+
+        // Update the database with the modified file path and other form data
+        $stmt = $conn->prepare("UPDATE users SET name=?, email=?, status=?, img_path=? WHERE id=?");
+        $stmt->bind_param("ssssi", $name, $email,  $status, $targetFile, $id);
+    } else {
+        $response = array('status' => 0, 'message' => 'Sorry, there was an error uploading your file.');
+        echo json_encode($response);
+        exit;
+    }
+} else {
+    // No image uploaded, update the database without the image path
+    $stmt = $conn->prepare("UPDATE users SET name=?, email=?, status=? WHERE id=?");
+    $stmt->bind_param("sssi", $name, $email, $status, $id);
+}
 
 // Execute the statement
 if ($stmt->execute()) {

@@ -128,7 +128,16 @@ $user_c = $user_catch["name"];
                         if (data.status == 1) {
                             toastr.success('Post has been updated successfully!');
                             $('#modalBTNLoad').modal('hide');
+                           
                             $("#postsList").load("post_list.php");
+                            $("#postsListRoadCrack").load("post_list_road_crack.php");
+                            $("#postsListTreeFallen").load("post_list_tree_fallen.php");
+                            $("#postsListUnsafeElectrical").load("post_list_unsafe_electrical.php");
+                            $("#postsListOther").load("post_list_other.php");
+                            $("#postsListRecent").load("post_list_recent.php");
+
+                            
+
                         } else {
                             $("#error").show().html("Error message: " + data.message);
                         }

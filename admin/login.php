@@ -18,16 +18,18 @@ include('./layouts/db.php')
     <link rel="stylesheet" href="./plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="./dist/css/adminlte.min.css">
+
+   
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-color: #a6cadf;">
     <div class="login-box">
-        <div class="login-logo">
-            <a href="#"><b>Admin</b>LTE</a>
+        <div class="login-logo ">
+            <img src="../assets/Images/Top-logo.png" alt="" class="img-fluid">
         </div>
         <!-- /.login-logo -->
-        <div class="card ">
-            <div class="card-body login-card-body ">
+        <div class="card " style="border-radius: 16px;">
+            <div class="card-body login-card-body "style="border-radius: 16px;">
                 <p class="login-box-msg mb-2">Sign in to start your session</p>
 
                 <form id="formUserLogin">
@@ -72,7 +74,7 @@ include('./layouts/db.php')
     <!-- jQuery Validation Plugin -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="../dist/js/adminlte.min.js"></script>
+    
 
     <script>
         $(document).ready(function(e) {
