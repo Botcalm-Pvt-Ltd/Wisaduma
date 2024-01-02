@@ -32,11 +32,12 @@ header {
 }
 .modal-body-design {
   display: flex;
+  /* border: 1px solid red; */
 }
 .modal-body-design-column {
   flex: 1;
   padding: 20px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
 
@@ -75,6 +76,18 @@ img.profile-photo-sm {
   gap: 5px;
   /* border: 1px solid red; */
 }
+
+.comment-sec .comment{
+  padding: 8px 16px;
+  border-radius: 16px;
+  border: 1px solid transparent !important;
+  background: #CCE1EE;
+}
+.comment-sec .comment:focus{
+  border: 1px solid #0069ac !important;
+  outline: none !important;
+}
+
 .comment-sec-2{
   display: flex;
   align-items: center;
@@ -99,7 +112,9 @@ img.profile-photo-sm {
 }
 
 .cont-tittle {
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 20px;
+  color: #202020;
 }
 .cont-person {
   font-size: 0.75rem;

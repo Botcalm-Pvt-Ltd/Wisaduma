@@ -24,7 +24,7 @@ if (isset($_SESSION['user'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
 
-  <link rel="icon" href="./assets/Images/logo.png" type="image/x-icon" />
+  <link rel="icon" href="./assets/images/fav.png" type="image/x-icon" />
   <link rel="stylesheet" href="./assets/dashboard.css">
   <link href="./assets/owl.carousel.css" rel="stylesheet" type="text/css" />
   <link href="./assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
@@ -48,19 +48,19 @@ include('./include/nav.php');
   <div>
     <div class="mb-5">
       <!-- slider one load here -->
-      <div class=" container animate-box" id="list01">
+      <div class=" container animate-box mt-5" id="list01">
       </div>
 
       <!-- slider two load here -->
-      <div class=" container animate-box" id="list02">
+      <div class=" container animate-box mt-5" id="list02">
       </div>
 
       <!-- slider three load here -->
-      <div class=" container animate-box" id="list03">
+      <div class=" container animate-box mt-5" id="list03">
       </div>
 
       <!-- slider four load here -->
-      <div class=" container animate-box" id="list04">
+      <div class=" container animate-box mt-5" id="list04">
       </div>
     </div>
 

@@ -24,7 +24,7 @@ if (isset($_SESSION['user'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyPosts</title>
 
-  <link rel="icon" href="./assets/Images/logo.png" type="image/x-icon" />
+  <link rel="icon" href="./assets/images/fav.png" type="image/x-icon" />
   <link rel="stylesheet" href="./assets/dashboard.css">
   <link href="./assets/owl.carousel.css" rel="stylesheet" type="text/css" />
   <link href="./assets/owl.theme.default.css" rel="stylesheet" type="text/css" />

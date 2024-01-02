@@ -24,19 +24,19 @@ $user = $result->fetch_assoc();
 
 
 
+<nav class="" style="background: #F8F9FA;">
 
-
-<nav>
-  
-  <div class="d-flex align-content-center justify-content-center">
-    <img src="./assets/Images/Top-logo.png" alt="Your Logo" class="logo">
+  <div class="d-flex align-content-center justify-content-center p-1 ">
+    <img src="./assets/images/Top-logo.png" alt="Your Logo" class="logo">
   </div>
 
 
- 
-  <input type="text" placeholder="Search" class="search-bar">
-  
-  
+  <div class="search-bar-div ">
+    <input type="text" placeholder="Search your course here.." class="search-bar">
+    <img src="./assets/images/search.png" alt="" class="search-icons">
+  </div>
+
+
 
   <div class="profile-dropdown">
     <img src="<?php echo $user["img_path"]  ?>" alt="" class="main-pro-img">
@@ -44,7 +44,9 @@ $user = $result->fetch_assoc();
       <a href="#" class="profile-dropdown-item" id="btn_edit_profile">My Profile</a>
       <a href="./my_posts.php" class="profile-dropdown-item">My Posts</a>
       <a href="#" class="profile-dropdown-item" id="btn_app_post">Add Post</a>
-      <a href="logout.php" class="profile-dropdown-item">Logout</a>
+      <a href="logout.php" class="profile-dropdown-item d-flex align-items-center" style="color: #F13E3E;"> <img src="./assets/images/logout.png " alt="" class="mr-2"> Logout</a>
+
+
     </div>
   </div>
 </nav>

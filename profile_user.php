@@ -61,7 +61,7 @@ $user = $result->fetch_assoc();
     </div>
 
     <div class="modal-footer">
-        <button type="submit" class="btn btn-primary w-100">Save</button>
+        <button type="submit" class="btn btn-primary w-100 log-reg-btn">Save</button>
     </div>
 
 </form>

@@ -1,6 +1,6 @@
 <div class="item px-2">
   <div class="fh5co_hover_news_img">
-    <img src="./assets/Images/2.png" alt="" data-toggle="modal" data-target="#myModal" />
+    <img src="./assets/images/2.png" alt="" data-toggle="modal" data-target="#myModal" />
     <div>
       <div class="cont-category w-10">Road Crack</div>
       <div class="cont-tittle"> Road Damage is a Nuisance for Drivers.</div>
@@ -13,7 +13,7 @@
 
 <div class="item px-2">
   <div class="fh5co_hover_news_img">
-    <div class="fh5co_news_img"><img src="./assets/Images/1.png " alt="" /></div>
+    <div class="fh5co_news_img"><img src="./assets/images/1.png " alt="" /></div>
     <div>
 
       <div class="cont-category w-45">Damaged bridge</div>
@@ -26,7 +26,7 @@
 </div>
 <div class="item px-2">
   <div class="fh5co_hover_news_img">
-    <div class="fh5co_news_img"><img src="./assets/Images/3.png" alt="" /></div>
+    <div class="fh5co_news_img"><img src="./assets/images/3.png" alt="" /></div>
     <div>
 
       <div class="cont-category w-45">Poor Drainage</div>
@@ -39,7 +39,7 @@
 </div>
 <div class="item px-2">
   <div class="fh5co_hover_news_img">
-    <div class="fh5co_news_img"><img src="./assets/Images/1.png" alt="" /></div>
+    <div class="fh5co_news_img"><img src="./assets/images/1.png" alt="" /></div>
     <div>
       <div class="cont-category ">Road Crack</div>
       <div class="cont-tittle"> Road Damage is a Nuisance for Drivers.</div>
@@ -51,7 +51,7 @@
 </div>
 <div class="item px-2">
   <div class="fh5co_hover_news_img">
-    <div class="fh5co_news_img"><img src="./assets/Images/3.png" alt="" /></div>
+    <div class="fh5co_news_img"><img src="./assets/images/3.png" alt="" /></div>
     <div>
 
       <div class="cont-category w-45">Poor Drainage</div>
@@ -64,7 +64,7 @@
 </div>
 <div class="item px-2">
   <div class="fh5co_hover_news_img">
-    <div class="fh5co_news_img"><img src="./assets/Images/1.png" alt="" /></div>
+    <div class="fh5co_news_img"><img src="./assets/images/1.png" alt="" /></div>
     <div>
       <div class="cont-category w-40">Road Crack</div>
       <div class="cont-tittle"> Road Damage is a Nuisance for Drivers.</div>

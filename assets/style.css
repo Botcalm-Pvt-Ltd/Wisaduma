@@ -1,127 +1,150 @@
+body{
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.custom-form{
+  border-radius: 8px !important;
+  padding: 8px;
+  background: #F8F9FA;
+}
+.log-reg-btn{
+  background: #0069AC !important;
+  border: none !important;
+}
+.log-reg-btn:hover{
+  background: #027dca !important;
+}
+
 .container-login {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      height: 100vh;
-      margin: 0;
-      background-color: #f8f9fa;
-      padding-left: 60px;
-      padding-right: 60px;
-    }
-  .column {
-      flex: 1;
-
-    }
-.logo-login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  background-color: #f8f9fa;
+  padding: 5px 60px;
+}
+.column {
+  flex: 1;
+}
+.logo-login {
   text-align: end;
-  } 
-  .top-logo-login{
-     text-align:center;
-  }
+}
 
-.login-tittle{
-     font-size: 3.5rem;
-    font-weight: 500;
+.top-logo-login {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom:80px;
+
 }
-.login-input-tittle{
-      font-size: 1.5rem;
-    font-weight: 500;
+
+.login-tittle {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 3rem;
 }
-.reg-input-tittle{
-    display: none;
+.login-input-tittle {
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  margin-bottom: 24px;
+ 
 }
-.register-input-tittle{
+.reg-input-tittle {
+  display: none;
+}
+.register-input-tittle {
   font-size: 2rem;
-    font-weight: 500
+  font-weight: 500;
 }
-.redirect-to-signup{
-    text-align: center;
-    font-weight: 500;
+.redirect-to-signup {
+  text-align: center;
+  font-weight: 500;
 }
-.redirect-to-link{
-   text-decoration: none;
+.redirect-to-link {
+  text-decoration: none;
 }
-.redirect-to-link-dash{
-    color: #ffffff;
-       text-decoration: none;
+.redirect-to-link-dash {
+  color: #ffffff;
+  text-decoration: none;
 }
-.moba-logo{
-    display: none;
+.moba-logo {
+  display: none;
 }
-.tab-logo{
-    display: none;
-}
-
-   @media (max-width: 767px) {
-      /* Hide the div on screens smaller than 768 pixels */
-      .logo-login {
-       display: none;
-      }
-      .tab-logo{
-    display: none;
-}
-      .moba-logo{
-      margin-top: 20px;
-      display: block;
-;
+.tab-logo {
+  display: none;
 }
 
-    }
+@media (max-width: 767px) {
+  /* Hide the div on screens smaller than 768 pixels */
+  .logo-login {
+    display: none;
+  }
+  .tab-logo {
+    display: none;
+  }
+  .moba-logo {
+    width: 105%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+}
 
-    @media (max-width: 767px) {
+@media (max-width: 767px) {
   .container-login {
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    padding: 5%;
   }
 
-  .login-tittle{
-     font-size: 1.5rem;
-}
-.login-input-tittle{
-  font-size: 1rem;
-}
+  .login-tittle {
+    font-size: 1.5rem;
+  }
+  .login-input-tittle {
+    font-size: 1rem;
+  }
   .column {
     order: 2; /* Change the order for mobile layout */
   }
 
-  .logo-login, .top-logo-login {
+  .logo-login,
+  .top-logo-login {
     text-align: center;
+    margin-bottom:24px;
   }
 }
 
-
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    /* Add your styles for iPad in portrait mode here */
-    .logo-login {
-       display: none;
-      }
-    .container-login {
-     display: flex;
+  /* Add your styles for iPad in portrait mode here */
+  .logo-login {
+    display: none;
+  }
+  .container-login {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 140px;
-
+    padding-top: 5%;
+  
   }
-    .tab-logo{
-      display: block;
-      margin-top: 10px;
-}
-.reg-input-tittle{
+  .tab-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .reg-input-tittle {
     display: block;
-      font-size: 1.5rem;
+    font-size: 1.5rem;
     font-weight: 500;
+  }
 }
+
+.my-border {
+  border: 1px solid red;
 }
-
-
-
-
-
-
-
-
-

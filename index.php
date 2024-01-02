@@ -10,45 +10,49 @@ include('./include/db.php')
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="icon" href="./assets/Images/logo.png" type="image/x-icon">
+  <link rel="icon" href="./assets/images/fav.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/style.css">
 
-    <!-- Toastr -->
-    <link rel="stylesheet" href="./plugins/toastr/toastr.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,500&display=swap" rel="stylesheet">
 
-  <title>Log-In</title>
+
+  <link rel="stylesheet" href="./plugins/toastr/toastr.min.css">
+
+  <title>Login-Wisaduma</title>
 </head>
 
 <body>
-  <div class="container-login">
-    <div class="column">
+  <div class="container-login ">
+    <div class="column ">
       <div class="top-logo-login">
-        <img src="./assets/Images/Top-logo.png" alt="top-logo-login" class="">
+        <img src="./assets/images/Top-logo.png" alt="top-logo-login" class="">
       </div>
-      <div class="login-tittle px-3">Welcome back!</div>
-      <div class="login-input-tittle  px-3">Enter your Credentials to access your account</div>
-      
+      <div class="login-tittle ">Welcome back!</div>
+      <div class="login-input-tittle  ">Enter your Credentials to access your account</div>
+
       <div class="mt-3">
-     
-      <form id="formLogin">
-        <div class="form-group">
-          <strong> <label  class="p-3 px-0">Email address</label></strong>
-          <input type="email" class="form-control shadow-none" name="email" placeholder="Enter email">
-        </div>
 
-        <div class="form-group">
-          <strong><label  class="p-3 px-0">Password</label></strong>
-          <input type="password" class="form-control shadow-none" name="password" placeholder="Enter Password">
-        </div>
+        <form id="formLogin">
+          <div class="form-group">
+            <strong> <label class="pt-3 pb-1">Email address</label></strong>
+            <input type="email" class="form-control custom-form shadow-none" name="email" placeholder="Enter your email">
+          </div>
 
-        <div class="form-group form-check p-3 px-0 mx-4 ">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label " for="exampleCheck1">Remember for 30 days</label>
-        </div>
+          <div class="form-group">
+            <strong><label class="pt-4 pb-1">Password</label></strong>
+            <input type="password" class="form-control custom-form shadow-none" name="password" placeholder="Enter your Password">
+          </div>
 
-        <button type="submit" class="btn btn-primary w-100"> LogIn</button>
-        
-      </form>
+          <div class="form-group form-check p-3 px-0 mx-4 ">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label " for="exampleCheck1">Remember for 30 days</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 py-2 log-reg-btn"  > LogIn</button>
+
+        </form>
 
       </div>
 
@@ -56,21 +60,21 @@ include('./include/db.php')
 
     </div>
 
-    <div class="column">
-      <div class="logo-login">
-        <img src="./assets/Images/logo.png" alt="logo-login" class="">
+    <div class="column  w-100">
+      <div class="logo-login  ">
+        <img src="./assets/images/logo.png" alt="logo-login" class="w-75">
       </div>
-      <div class="tab-logo">
-        <img src="./assets/Images/tab-logo.png" alt="logo-login" class="">
+      <div class="tab-logo ">
+        <img src="./assets/images/tab-logo.png" alt="logo-login" class="">
       </div>
-      <div class="moba-logo">
-        <img src="./assets/Images/logo-moba.png" alt="logo-login" class="">
+      <div class="moba-logo ">
+        <img src="./assets/images/logo-moba.png" alt="logo-login" class="">
       </div>
     </div>
 
   </div>
 
-  
+
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <!-- jQuery Validation Plugin -->
@@ -79,7 +83,7 @@ include('./include/db.php')
   <!-- Toastr -->
   <script src="./plugins/toastr/toastr.min.js"></script>
 
-  
+
   <script>
     $(document).ready(function(e) {
       $("#formLogin").validate({
@@ -104,11 +108,11 @@ include('./include/db.php')
           }
         },
         highlight: function(element) {
-          $(element).closest('.form-control').addClass('is-invalid');
+          $(element).closest('.form-control custom-form').addClass('is-invalid');
         },
         unhighlight: function(element) {
-          $(element).closest('.form-control').removeClass('is-invalid');
-          $(element).closest('.form-control').addClass('is-valid');
+          $(element).closest('.form-control custom-form').removeClass('is-invalid');
+          $(element).closest('.form-control custom-form').addClass('is-valid');
         },
         errorElement: 'div',
         errorClass: 'invalid-feedback',
@@ -141,13 +145,11 @@ include('./include/db.php')
                 // Clear input fields
                 $form.find('input').val('');
 
-              }  else if (data.status == 0){
+              } else if (data.status == 0) {
                 toastr.error('User not found!');
                 // Clear input fields
                 $form.find('input').val('');
-              } 
-              
-              else {
+              } else {
                 toastr.error('Something went wrong! Plz tray again');
                 // Clear input fields
                 $form.find('input').val('');

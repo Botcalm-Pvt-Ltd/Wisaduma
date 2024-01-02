@@ -25,7 +25,7 @@ include('./layouts/db.php')
 <body class="hold-transition login-page" style="background-color: #a6cadf;">
     <div class="login-box">
         <div class="login-logo ">
-            <img src="../assets/Images/Top-logo.png" alt="" class="img-fluid">
+            <img src="../assets/images/Top-logo.png" alt="" class="img-fluid">
         </div>
         <!-- /.login-logo -->
         <div class="card " style="border-radius: 16px;">

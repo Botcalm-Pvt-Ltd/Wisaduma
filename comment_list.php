@@ -19,7 +19,7 @@ while ($row = $result->fetch_assoc()) {
 
 <div class="comment-sec-2">
     <img src="<?php echo $user_img; ?>" alt="" class="main-pro-img mb-3 mr-2">
-    <p class="text-justify "><strong><?php echo $user_c; ?>:</strong> <?php echo $row["comment"]  ?></p>
+    <p class="text-justify " style="color: #02234D;"><strong><?php echo $user_c; ?>:</strong> <?php echo $row["comment"]  ?></p>
 </div>
 
 <?php

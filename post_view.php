@@ -61,18 +61,18 @@ $user_login = $user_login["img_path"];
     </button>
 </div>
 
-<div class="px-3"><?php echo $formattedDate  ?></div>
+<div class="px-3" style="color: #50739F ;"><?php echo $formattedDate  ?></div>
 
-<div class="px-3"> Post by : <?php echo $user_c; ?></div>
+<div class="px-3" style="color: #02234D; margin-bottom: 16px;"> Post by : <?php echo $user_c; ?></div>
 
-<br>
+
 
 
 <div class="modal-body-design ">
     <div class="modal-body-design-column">
         <img class="img-fluid" src="<?php echo $posts["img_path"]  ?>" alt="" />
     </div>
-    <div class="modal-body-design-column">
+    <div class="modal-body-design-column" style="color: #02234D;">
         <?php echo $posts["description"]  ?>
     </div>
 
@@ -91,9 +91,9 @@ $user_login = $user_login["img_path"];
                 <div class="comment-sec ">
                     <img src="<?php echo $user_login;  ?>" alt="" class="main-pro-img" >
 
-                    <input type="text" name="comment" placeholder="Add a comment..." class="w-100 py-2 ">
+                    <input type="text" name="comment" placeholder="Add a comment..." class="w-100 comment">
 
-                    <button type="submit" class="btn btn-secondary  mb-2">Comment</button>
+                    <button type="submit" class="btn btn-secondary   " style="border-radius: 16px;">Comment</button>
 
                     <input type="text" name="post_id" value="<?php echo $posts["id"]; ?>" style="display: none;">
                     <input type="text" name="user_id" value="<?php echo $posts["post_by"]; ?>" style="display: none;">
@@ -123,6 +123,11 @@ $user_login = $user_login["img_path"];
                 required: true,
             }
         },
+        messages: {
+                comment: {
+                    required: "",
+                },
+            } ,       
 
         submitHandler: function(form, event) {
             var $form = $('#formComments');

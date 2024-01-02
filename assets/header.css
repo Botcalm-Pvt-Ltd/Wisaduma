@@ -1,8 +1,19 @@
+
+.log-reg-btn{
+  background: #0069AC !important;
+  border: none !important;
+}
+.log-reg-btn:hover{
+  background: #027dca !important;
+}
+
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: #F8F9FA;
 }
 
 /* Navbar styles */
@@ -29,12 +40,25 @@ nav {
 }
 
 /* Search bar styles */
-.search-bar {
-  max-width: 600px;
+
+.search-bar-div{
+  max-width: 800px;
   width: 100%;
-  padding: 8px;
-  border: black solid 1px;
-  border-radius: 16px;
+  position: relative;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 16px 8px;
+  padding-left: 30px;
+  border: #9E9E9E solid 1px;
+  border-radius: 8px;
+}
+
+.search-icons{
+position: absolute;
+left: 8px;
+top: 32%;
 }
 
 /* Profile dropdown styles */
@@ -60,6 +84,8 @@ nav {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 2;
   text-align: left;
+  border-radius: 16px;
+  padding: 16px;
 }
 
 .profile-dropdown:hover .profile-dropdown-content {
@@ -69,24 +95,41 @@ nav {
 
 .profile-dropdown-item {
   padding: 12px;
-  text-decoration: none;
+  text-decoration: none !important;
   display: block;
   color: #333;
 }
 
+.modal-footer{
+  border: none !important;
+}
 .modal-content {
   border-radius: 20px;
-  border: 1px solid;
+  border: none;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.modal-header{
+  border: none !important;
 }
 .modal-title {
   font-weight: 700;
+  /* border: 1px solid red; */
+  width: 100%;
+  color: #02234D;
 }
 
 /* dashboard css */
 .custom_img {
-  width: 200px !important;
-  height: 100px !important;
+  width: 100% !important;
+  height: 150px !important;
   border-radius: 16px !important;
+  background: #fff !important;
+  cursor: pointer;
+}
+.item-inner{
+  padding: 16px;
+  background: #fff;
+  border-radius: 16px;
 }
 
 @media (max-width: 500px) {
@@ -98,5 +141,19 @@ nav {
     height: 45px;
     width: 45px;
   }
+
+  nav{
+    padding-top: 16px;
+  }
+  .search-bar {
+    padding: 8px 24px;
+    
+  }
+
+  .search-icons{
+    position: absolute;
+    left: 6px;
+    top: 26%;
+    }
   
 }

@@ -10,7 +10,7 @@ include('./include/db.php')
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
 
-  <link rel="icon" href="./assets/Images/logo.png" type="image/x-icon" />
+  <link rel="icon" href="./assets/images/logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="./assets/dashboard.css">
   <link href="./assets/owl.carousel.css" rel="stylesheet" type="text/css" />
   <link href="./assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
@@ -25,7 +25,7 @@ include('./include/db.php')
 <body>
 
   <nav>
-    <img src="./assets/Images/Top-logo1.png" alt="Your Logo" class="logo">
+    <img src="./assets/images/Top-logo1.png" alt="Your Logo" class="logo">
     <input type="text" placeholder="Search" class="search-bar">
 
     <div class="profile-dropdown">
@@ -55,7 +55,7 @@ include('./include/db.php')
           <div class="owl-carousel owl-theme" id="slider3">
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/l1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Tree fallen</div>
@@ -68,7 +68,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/l1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Tree fallen</div>
@@ -81,7 +81,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/l1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Tree fallen</div>
@@ -94,7 +94,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/l1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Tree fallen</div>
@@ -116,7 +116,7 @@ include('./include/db.php')
           <div class="owl-carousel owl-theme" id="slider4">
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/t1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Unsafe Electrical</div>
@@ -129,7 +129,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/t1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Unsafe Electrical</div>
@@ -142,7 +142,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/t1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Unsafe Electrical</div>
@@ -155,7 +155,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/t1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Unsafe Electrical</div>
@@ -191,8 +191,8 @@ include('./include/db.php')
 
           <div class="modal-body-design ">
             <div class="modal-body-design-column">
-              <img class="responsive-image desktop-image" src="./assets/Images/large-modal.png" alt="" />
-              <img class="responsive-image mobile-image" src="./assets/Images/1.png" alt="" />
+              <img class="responsive-image desktop-image" src="./assets/images/large-modal.png" alt="" />
+              <img class="responsive-image mobile-image" src="./assets/images/1.png" alt="" />
             </div>
             <div class="modal-body-design-column">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta facilis enim veniam voluptatem quod debitis corporis! Enim maxime quos nihil et perferendis totam harum placeat magnam repellendus veniam totam harum placeat magnam repellendus veniam totam harum placeat. Voluptatibus autem voluptatum eligendi, magnam repellendus veniam totam harum placeat
@@ -322,7 +322,7 @@ include('./include/db.php')
           <div class="owl-carousel owl-theme" id="slider3">
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/l1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Tree fallen</div>
@@ -335,7 +335,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/l1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Tree fallen</div>
@@ -348,7 +348,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/l1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Tree fallen</div>
@@ -361,7 +361,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/l1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/l1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Tree fallen</div>
@@ -383,7 +383,7 @@ include('./include/db.php')
           <div class="owl-carousel owl-theme" id="slider4">
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/t1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Unsafe Electrical</div>
@@ -396,7 +396,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/t1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Unsafe Electrical</div>
@@ -409,7 +409,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/t1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Unsafe Electrical</div>
@@ -422,7 +422,7 @@ include('./include/db.php')
             </div>
             <div class="item px-2">
               <div class="fh5co_hover_news_img">
-                <div class="fh5co_news_img"><img src="./assets/Images/t1.png" alt="" /></div>
+                <div class="fh5co_news_img"><img src="./assets/images/t1.png" alt="" /></div>
                 <div>
 
                   <div class="cont-category w-45">Unsafe Electrical</div>

@@ -46,7 +46,7 @@ if (isset($_SESSION['user'])) {
         <input type="text" class="form-control" name="post_by" value="<?php echo $userId;  ?>" style="display: none;">
     </div>
     <div class="modal-footer">
-        <button type="submit" class="btn btn-primary w-100">Submit</button>
+        <button type="submit" class="btn btn-primary w-100 log-reg-btn">Submit</button>
     </div>
 
 </form>

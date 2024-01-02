@@ -8,7 +8,7 @@ if (isset($_SESSION['user'])) {
 
 ?>
 
-<div class="my-3" style="cursor: pointer; ">
+<div class="my-3 mb-5" style="cursor: pointer; ">
    <a href="./dashboard.php" style="text-decoration: none; color: #0069AC; font-size: 16px;"> <i class="fa fa-arrow-left "></i>
     Back To Home </a>
 </div>
@@ -39,18 +39,21 @@ if (isset($_SESSION['user'])) {
 
   ?>
 
-    <div class="item px-2">
-      <div class="fh5co_hover_news_img">
+    <div class="item px-2  mx-2">
+      <div class="item-inner">
         <img src=" <?php echo $row["img_path"]  ?>" alt="" id="btnView<?php echo $row["id"]; ?>" class="custom_img" />
         <div >
 
-          <div class="cont-category w-10"><?php echo $row["category"]; ?></div>
+        <div class="cont-category w-10"><?php echo $row["category"]; ?></div>
           <div class="cont-tittle"> <?php echo mb_strimwidth($row["title"], 0, 26, "...");   ?></div>
-          <div class="cont-person"><?php echo $user_c;  ?></div>
-          <div class="cont-location">Thihagada</div>
 
-          <!-- Add a unique identifier to each thumbs-up icon using the post ID -->
-          <i class="fa fa-thumbs-up " id="like_btn<?php echo $row["id"]; ?>">  <?php echo $likeCount; ?></i>
+          <div class="progress mt-2 mb-3" style="height: 5px; ">
+            <div class="progress-bar" style="width:50%; background:#0069AC;"></div>
+          </div>
+
+          <i class="fa fa-heart mb-3" id="like_btn<?php echo $row["id"]; ?>"> <?php echo $likeCount; ?></i>
+
+          <p style="font-weight: 600; font-size: 14px;">Sri Lanka <br><span style="font-size: 12px; font-weight: 400px;">Thihagoda</span></p>
 
             <div class="d-flex align-items-center mb-2">
                 <button id="btnDelete<?php echo $row["id"]; ?>" class="btn btn-sm btn-danger">Delete</button>

@@ -11,55 +11,62 @@ include('./include/db.php')
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="./assets/style.css">
-  <link rel="icon" href="./assets/Images/logo.png" type="image/x-icon">
+  <link rel="icon" href="./assets/images/fav.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,500&display=swap" rel="stylesheet">
 
   <!-- Toastr -->
   <link rel="stylesheet" href="./plugins/toastr/toastr.min.css">
 
-  <title>Register</title>
+  <title>Register-Wisaduma</title>
 </head>
 
 <body>
   <div class="container-login">
     <div class="column">
       <div class="top-logo-login">
-        <img src="./assets/Images/Top-logo.png" alt="top-logo-login" class="">
+        <img src="./assets/images/Top-logo.png" alt="top-logo-login" class="">
       </div>
-      <div class="reg-input-tittle  px-3">Enter your Credentials to access your account</div>
-      <div class="register-input-tittle px-3">Get Started Now</div>
+    
+      <div class="login-tittle" style="margin-bottom: 24px;">Get Started Now</div>
       <div>
 
         <form id="formUserRegister">
           <div class="form-group">
-            <strong> <label class="p-3 px-0">Name</label></strong>
-            <input type="text" class="form-control shadow-none" name="name" placeholder="Enter Name">
+            <strong> <label class="pt-3 pb-1">Name</label></strong>
+            <input type="text" class="form-control custom-form shadow-none" name="name" placeholder="Enter Name">
 
           </div>
           <div class="form-group ">
-            <strong> <label class="p-3 px-0">Email address</label></strong>
-            <input type="email" class="form-control shadow-none" name="email" placeholder="Enter email">
+            <strong> <label class="pt-3 pb-1">Email address</label></strong>
+            <input type="email" class="form-control custom-form shadow-none" name="email" placeholder="Enter email">
           </div>
           <div class="form-group">
-            <strong> <label class="p-3 px-0">Password</label></strong>
-            <input type="password" class="form-control shadow-none" name="password" placeholder="Enter Password">
+            <strong> <label class="pt-3 pb-1">Password</label></strong>
+            <input type="password" class="form-control custom-form shadow-none" name="password" placeholder="Enter Password">
           </div>
 
-          <button type="submit" class="btn btn-primary w-100 mt-5">Sign Up</button>
+          <button type="submit" class="btn btn-primary w-100 py-2 log-reg-btn mt-5">Sign Up</button>
 
         </form>
+
+        <div class="redirect-to-signup p-5">Have an account? <a href="index.php" class="redirect-to-link">Sign In</a></div>
 
 
       </div>
     </div>
-    <div class="column">
-      <div class="logo-login">
-        <img src="./assets/Images/logo.png" alt="logo-login" class="">
+    
+    <div class="column  w-100">
+      <div class="logo-login  ">
+        <img src="./assets/images/logo.png" alt="logo-login" class="w-75">
       </div>
-      <div class="tab-logo">
-        <img src="./assets/Images/tab-logo.png" alt="logo-login" class="">
+      <div class="tab-logo ">
+        <img src="./assets/images/tab-logo.png" alt="logo-login" class="">
       </div>
-      <div class="moba-logo">
-        <img src="./assets/Images/logo-moba.png" alt="logo-login" class="">
+      <div class="moba-logo ">
+        <img src="./assets/images/logo-moba.png" alt="logo-login" class="">
       </div>
     </div>
   </div>
